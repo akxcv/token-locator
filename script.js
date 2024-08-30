@@ -49,7 +49,7 @@ Hooks.once("init", () => {
             /** @override */
             get isVisible() {
                 const visible = super.isVisible;
-                const isHiding = this.actor.statuses.has('hiding');
+                const isHiding = this.actor?.statuses.has('hiding');
 
                 if (!visible && !isHiding && active || visible && this.document.hidden) {
                     this.detectionFilter = hatchFilter;
